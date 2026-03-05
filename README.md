@@ -25,14 +25,20 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [X] Describe the game's purpose.
+In short, this game provides a user a certain number of attempts to guess a randomly generated secret number. However, this game is also glitchy and is designed for the user/programmar to find bugs, document them, understand why and how they're happening, and fix them.
+
+- [X] Detail which bugs you found.
+I found multiple bugs:
+   1. Game tells user to go low or go high but the numbers would be in the opposite direction. I.e. secret number is 5 and user guesses 4 but game says to guess lower.
+   2. History was not showing correctly or was delayed in showing past attempts.
+   3. Score was showing as negative even when user guessed the right number, and then final score was showing as positive.
+   4. Attempts allowed vs attempts left vs current attempts were mismatched. i.e. attempts left is 3, attempts allowed is 8, and current attempts is 6.
+
+- [X] Explain what fixes you applied.
+I fixed bug 1 and 2! History is no longer delayed and hints are no longer incorrect.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- [Bug 1: Wrong Hint Fixed](delayed_history_fixed.png)
+- [Bug 2: Delayed History Fixed](wrong_hint_fixed.png)

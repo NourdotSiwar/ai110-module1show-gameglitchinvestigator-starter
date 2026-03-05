@@ -39,9 +39,8 @@ Turns out, Copilot did not mention that this function was added recently and tha
 How did you decide whether a bug was really fixed?
 I made sure to pass the given tests in the test file while also running the code live and going through the happy path to see if it got fixed or if it is reoccurring. Passing the tests told me that my code at least is passing the happy path.
 
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
-  I ran the test_game_logic.py and passed all tests like test_guess_too_high() and test_guess_too_low().
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+I ran the test_game_logic.py and passed all tests like test_guess_too_high() and test_guess_too_low().
   
 - Did AI help you design or understand any tests? How?
 The AI wrote the tests for me on top of the additional existing test. I also ran into issues with the data type the functions returned so I had AI work with alternating all tests to receive a specific data type.
@@ -51,14 +50,24 @@ The AI wrote the tests for me on top of the additional existing test. I also ran
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+On my end, the secret number did not keep changing. However, if it was, I would guess it was because perhaps the secret number was initialized a value that kept changing every run (perhaps rand() was being used).
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+I would say to imagine that Streamlike is a like a whiteboard that gets erased and redrawn everytime any action is taken like a clicking a button or typing a number. So everytime we interact with the app, Python runs the entire app.py file from top to bottom, and that is a "rerun".
+Whereas session state is like a sticky note on the whiteboard that does not get erased, and the content it holds is remembered between reruns. So for example, the secret number lives in st.session_state nd thus it did not change everytime.
+
 - What change did you make that finally gave the game a stable secret number?
+I did not make any change as I mentioned again that I did not counter a bug of a constantly changing secret number. If I had to keep it stable until the user guessed correctly or ran out of attempts, I would use some form of variable to store the randomly chosen secret number and use that variable as it will have a fixed value.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+- What is one habit or strategy from this project that you want to reuse in future labs or projects? This could be a testing habit, a prompting strategy, or a way you used Git.
+I want to reuse the idea of having AI write my tests and explore different edge cases so we can focus on test-driven development over just writing code and seeing what works.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+Next time, I would probably focus more on reading the codebase and getting the AI to explain it better and simpler than having it just tell me if a function is in this file or not.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+It makes me realize that AI can write code that looks correct but actually can fail lots of edge cases and non-ideal paths.
