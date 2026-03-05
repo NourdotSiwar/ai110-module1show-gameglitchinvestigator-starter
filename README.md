@@ -40,5 +40,5 @@ I fixed bug 1 and 2! History is no longer delayed and hints are no longer incorr
 
 ## 📸 Demo
 
-- [Bug 1: Wrong Hint Fixed](delayed_history_fixed.png)
-- [Bug 2: Delayed History Fixed](wrong_hint_fixed.png)
+- [Bug 1: Wrong Hint Fixed](wrong_hint_fixed.png)
+- [Bug 2: Delayed History Fixed](delayed_history_fixed.png)
